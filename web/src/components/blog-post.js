@@ -16,6 +16,7 @@ function BlogPost(props) {
     mainImage,
     publishedAt,
   } = props;
+  console.log(props);
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (

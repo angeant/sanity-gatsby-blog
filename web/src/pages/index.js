@@ -11,6 +11,11 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
 
+import '../css/normalize.css';
+import '../css/webflow.css';
+import '../css/voicemix-blog.webflow.css';
+import MainBlogPostPreview from "../components/main-blog-post-preview";
+
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
     crop {
@@ -41,7 +46,7 @@ export const query = graphql`
       keywords
     }
     posts: allSanityPost(
-      limit: 6
+      limit: 7
       sort: { fields: [publishedAt], order: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
@@ -49,6 +54,9 @@ export const query = graphql`
         node {
           id
           publishedAt
+          categories {
+            title
+          }
           mainImage {
             ...SanityImage
             alt
@@ -76,10 +84,25 @@ const IndexPage = (props) => {
   }
 
   const site = (data || {}).site;
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
+  const firstNode = (data || {}).posts
+  ? mapEdgesToNodes(data.posts.edges)
+  .filter(filterOutDocsWithoutSlugs)
+  .filter(filterOutDocsPublishedInTheFuture)
+: [];
+
+  var nodesForGrid = [];
+  if (data.posts) {
+    for (let index = 1; index < data.posts.edges.length; index++) {
+      const element = data.posts.edges[index];
+      nodesForGrid.push(element);
+    }
+  }
+  console.log(data.posts.edges);
+
+  const postNodes = nodesForGrid != []
+    ? mapEdgesToNodes(nodesForGrid)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
     : [];
 
   if (!site) {
@@ -95,8 +118,15 @@ const IndexPage = (props) => {
         description={site.description}
         keywords={site.keywords}
       />
+      <div class="titlesection">
+        <div class="w-container">
+          <div class="titleblock">Es momento de alzar la voz por lo que vale la pena para ti.</div>
+        </div>
+      </div>
+      <li key={0}>
+      <MainBlogPostPreview nodes={firstNode} isInList />
+      </li>
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"

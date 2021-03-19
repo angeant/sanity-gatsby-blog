@@ -11,30 +11,33 @@ import { responsiveTitle3 } from "./typography.module.css";
 function BlogPostPreview(props) {
   return (
     <Link
-      className={props.isInList ? styles.inList : styles.inGrid}
+      className={cn(props.isInList ? styles.inList : styles.inGrid, "gridelementblock")}
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
-      <div className={styles.leadMediaThumb}>
+      <div class="gridelementimage">
         {props.mainImage && props.mainImage.asset && (
           <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
-              .width(600)
-              .height(Math.floor((9 / 16) * 600))
-              .auto("format")
-              .url()}
+            class="image"
+            src={imageUrlFor(buildImageObj(props.mainImage))}
+            loading="lazy" 
+            width="677" 
+            sizes="(max-width: 767px) 100vw, 677px"
             alt={props.mainImage.alt}
           />
         )}
       </div>
-      <div className={styles.text}>
-        <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
-        {props._rawExcerpt && (
-          <div className={styles.excerpt}>
-            <PortableText blocks={props._rawExcerpt} />
-          </div>
-        )}
-        <div className={styles.date}>
-          {format(new Date(props.publishedAt), "MMMM Mo, yyyy")}
+      <div class="gridelementdatablock">
+        <div class="aligntopblock">
+          <div class="categoryblock">{props.categories[0].title}</div>
+          <h3 style={{lineHeight: '20px', margin: '0px'}} class="gridposttitleblock">{props.title}</h3>
+          {props._rawExcerpt && (
+             <div style={{marginTop: '5px'}} className="mainpostcontentblock">
+              {props._rawExcerpt[0].children[0].text}
+            </div>
+          )}
+        </div>
+        <div  class="posttimestampblock" >
+          {format(new Date(props.publishedAt), "dd/MM/yy")}
         </div>
       </div>
     </Link>

@@ -1,0 +1,462 @@
+.w-layout-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 16px;
+  grid-column-gap: 16px;
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.headerleftblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.headerrightblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.logoblock {
+  width: 150px;
+  margin-top: 25px;
+  margin-right: 23px;
+  margin-bottom: 25px;
+}
+
+.actionbutton {
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 20px;
+  background-color: #2b3748;
+  font-family: Averta, sans-serif;
+  font-size: 12px;
+  line-height: 11px;
+  font-weight: 600;
+}
+
+.menudropdownbuttonblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 18px;
+  margin-left: 18px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Averta, sans-serif;
+  color: #2b3748;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.text-block {
+  font-size: 14px;
+  letter-spacing: -0.3px;
+}
+
+.menuitemtext {
+  letter-spacing: -0.2px;
+}
+
+.div-block {
+  width: 10px;
+  margin-left: 3px;
+}
+
+.titleblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 30px;
+  padding-right: 42%;
+  padding-bottom: 50px;
+  font-family: Averta, sans-serif;
+  color: #2b3748;
+  font-size: 32px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.mainpostimaeblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 380px;
+  margin-right: 22px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.mainpostdatablock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 32%;
+  padding: 44px 45px 31px 28px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+  background-color: #f7f7f9;
+}
+
+.container-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.categoryblock {
+  font-family: Averta, sans-serif;
+  color: #7f57f3;
+  font-size: 8px;
+  line-height: 14px;
+  font-weight: 800;
+}
+
+.mainposttitleblock {
+  margin-top: 2px;
+  font-family: Averta, sans-serif;
+  color: #2b3748;
+  font-size: 23px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.mainpostcontentblock {
+  margin-top: 15px;
+  font-family: Averta, sans-serif;
+  color: #4f545c;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+}
+
+.text-block-4 {
+  margin-top: 13px;
+  font-size: 11px;
+}
+
+.posttimestampblock {
+  margin-top: 10px;
+  font-family: Averta, sans-serif;
+  color: #bebed1;
+  font-size: 10px;
+}
+
+.grid {
+  margin-top: 32px;
+  grid-template-areas: "Area";
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.gridelementblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.gridelementimage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+}
+
+.gridelementdatablock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 19px 20px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #f7f7f9;
+}
+
+.gridposttitleblock {
+  margin-top: 1px;
+  font-family: Averta, sans-serif;
+  color: #2b3748;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.8px;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.gridelementimage-copy {
+  height: 150px;
+  background-image: url('../images/ExampleMainPostImage.png');
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.image {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#w-node-c2cd5d92-6c27-64f0-b9de-7841658122e5-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-efef473a-156d-3dbd-d724-fb25a14c0a4c-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-_8b49f1b1-e709-91c6-e901-3affe334da26-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-_92ae0b6b-7b71-d311-681d-905779e3e6cb-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-_6d08f606-e09b-dce7-12c6-7068f9fdd6b0-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+#w-node-_6b2a0da4-137e-9790-3af1-9117fe21c8eb-3ae47531 {
+  -ms-grid-column: span 1;
+  grid-column-start: span 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: span 1;
+  -ms-grid-row: span 1;
+  grid-row-start: span 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: span 1;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-ExtraBoldItalic.otf') format('opentype');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Extrathin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-ExtrathinItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-SemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-Thin.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Averta';
+  src: url('../fonts/Averta-ThinItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}

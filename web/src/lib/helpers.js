@@ -5,8 +5,8 @@ export function cn(...args) {
 }
 
 export function mapEdgesToNodes(data) {
-  if (!data.edges) return [];
-  return data.edges.map((edge) => edge.node);
+  if (!data) return [];
+  return data.map((edge) => edge.node);
 }
 
 export function filterOutDocsWithoutSlugs({ slug }) {

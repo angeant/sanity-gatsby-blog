@@ -4,5 +4,8 @@
 # Dependency directories
 /node_modules
 
+# misc
+/Front Webflow
+
 # lerna files
 /lerna-debug.log
