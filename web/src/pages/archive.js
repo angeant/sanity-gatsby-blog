@@ -7,6 +7,8 @@ import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 
+import BlogPostPreviewList from "../components/blog-post-preview-list";
+
 import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
@@ -19,6 +21,9 @@ export const query = graphql`
         node {
           id
           publishedAt
+          categories {
+            title
+          }
           mainImage {
             ...SanityImage
             alt
@@ -45,15 +50,15 @@ const ArchivePage = (props) => {
     );
   }
 
-  const postNodes = data && data.posts && mapEdgesToNodes(data.posts);
+  const postNodes = data && data.posts && mapEdgesToNodes(data.posts.edges);
 
   return (
     <Layout>
-      <SEO title="Archive" />
+      <SEO title="Archivo" />
       <Container>
-        <h1 className={responsiveTitle1}>Archive</h1>
+        <h1 className={responsiveTitle1}>Archivo</h1>
         {postNodes && postNodes.length > 0 && (
-          <BlogPostPreviewGrid nodes={postNodes} />
+          <BlogPostPreviewList nodes={postNodes} />
         )}
       </Container>
     </Layout>

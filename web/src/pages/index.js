@@ -85,10 +85,10 @@ const IndexPage = (props) => {
 
   const site = (data || {}).site;
   const firstNode = (data || {}).posts
-  ? mapEdgesToNodes(data.posts.edges)
-  .filter(filterOutDocsWithoutSlugs)
-  .filter(filterOutDocsPublishedInTheFuture)
-: [];
+    ? mapEdgesToNodes(data.posts.edges)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
+    : [];
 
   var nodesForGrid = [];
   if (data.posts) {
@@ -123,9 +123,7 @@ const IndexPage = (props) => {
           <div class="titleblock">Es momento de alzar la voz por lo que vale la pena para ti.</div>
         </div>
       </div>
-      <li key={0}>
-      <MainBlogPostPreview nodes={firstNode} isInList />
-      </li>
+      <MainBlogPostPreview key={0} nodes={firstNode} isInList />
       <Container>
         {postNodes && (
           <BlogPostPreviewList

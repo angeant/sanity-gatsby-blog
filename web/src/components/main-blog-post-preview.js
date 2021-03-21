@@ -32,7 +32,7 @@ function MainBlogPostPreview(props) {
                     <div class="mainpostdatablock">
                         <div class="aligntopblock">
                             <div class="categoryblock">{node.categories[0].title}</div>
-                            <div style={{lineHeight: '20px'}} class={cn(responsiveTitle3, "mainposttitleblock")}>{node.title}</div>
+                            <div class={cn(responsiveTitle3, "mainposttitleblock")}>{node.title}</div>
                             {node._rawExcerpt &&
                                 <div className="mainpostcontentblock">
                                     {node._rawExcerpt[0].children[0].text} 

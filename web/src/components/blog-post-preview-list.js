@@ -5,25 +5,20 @@ import React from "react";
 
 function BlogPostPreviewGrid(props) {
   return (
-    <div className={styles.root}>
-
-      <ul className={styles.grid}>
-        <div class="postsgridsection">
-          <div class="w-container">
-            <div class="w-layout-grid grid">
-              {props.nodes &&
-                props.nodes.map((node) => (
-                  <li key={node.id}>
-                    <BlogPostPreview {...node} isInList />
-                  </li>
-                ))}
-            </div>
+    <div>
+      <div class="postsgridsection">
+        <div class="w-container">
+          <div class="w-layout-grid grid">
+            {props.nodes &&
+              props.nodes.map((node) => (
+                <BlogPostPreview key={node.id} {...node} isInList />
+              ))}
           </div>
         </div>
-      </ul>
+      </div>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
-          <Link to={props.browseMoreHref}>Browse more</Link>
+          <Link to={props.browseMoreHref}>Explorar más</Link>
         </div>
       )}
     </div>
