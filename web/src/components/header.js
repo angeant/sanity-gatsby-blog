@@ -9,6 +9,19 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+/*<Dropdown >
+<Dropdown.Toggle
+childBsPrefix={arrow}
+style={{ fontFamily: 'Averta', backgroundColor: '#fff', borderColor: '#fff', fontSize: '13px', fontWeight: 'w600', letterSpacing: '-0.2px', color: '#2b3748' }} id="dropdown-custom-components">
+Categorías </Dropdown.Toggle>
+
+<Dropdown.Menu >
+<Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/carrers">Carrera</Dropdown.Item>
+<Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/activeVoices">Voces activas</Dropdown.Item>
+<Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/users">Usuarios</Dropdown.Item>
+</Dropdown.Menu>
+</Dropdown>*/
+
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
   <div class="blogheadersection">
@@ -16,24 +29,13 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
       <div class="headerleftblock">
         <Link to="/"><div class="logoblock"><img src={logoBlog} loading="lazy" width="366" sizes="150px" srcset={logoBlog02 + "500w", logoBlog + " 732w"} alt="" /></div></Link>
         <div class="menudropdownbuttonblock">
-          <Dropdown >
-            <Dropdown.Toggle
-              childBsPrefix={arrow}
-              style={{ fontFamily: 'Averta', backgroundColor: '#fff', borderColor: '#fff', fontSize: '13px', fontWeight: 'w600', letterSpacing: '-0.2px', color: '#2b3748' }} id="dropdown-custom-components">
-              Categorías </Dropdown.Toggle>
-
-            <Dropdown.Menu >
-              <Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/carrers">Carrera</Dropdown.Item>
-              <Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/activeVoices">Voces activas</Dropdown.Item>
-              <Dropdown.Item style={{ fontSize: '12px', fontWeight: 'w500', }} href="#/users">Usuarios</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          
 
         </div>
 
       </div>
       <div class="headerrightblock">
-        <a href="#" class="actionbutton w-button">Acceder</a>
+        <div style={{cursor: 'pointer'}} onClick={() => window.location = "https://voicemix.io"} class="actionbutton w-button">Acceder</div>
       </div>
     </div>
   </div>

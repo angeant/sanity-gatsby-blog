@@ -98,6 +98,8 @@ const IndexPage = (props) => {
     }
   }
   console.log(data.posts.edges);
+  console.log(data);
+
 
   const postNodes = nodesForGrid != []
     ? mapEdgesToNodes(nodesForGrid)
