@@ -10,6 +10,7 @@ import { responsiveTitle3 } from "./typography.module.css";
 import '../css/normalize.css';
 import '../css/webflow.css';
 import '../css/voicemix-blog.webflow.css';
+import '../css/addition.css';
 
 function MainBlogPostPreview(props) {
     const node = props.nodes[0];
@@ -19,6 +20,7 @@ function MainBlogPostPreview(props) {
 
             <Link
                 className={cn(props.isInList ? styles.inList : styles.inGrid, "container-2 w-container")}
+                style={{textDecoration: 'none'}}
                 to={getBlogUrl(node.publishedAt, node.slug.current)}
             >
                     {node.mainImage && node.mainImage.asset && (
@@ -32,7 +34,7 @@ function MainBlogPostPreview(props) {
                     <div class="mainpostdatablock">
                         <div class="aligntopblock">
                             <div class="categoryblock">{node.categories[0].title}</div>
-                            <div class={cn(responsiveTitle3, "mainposttitleblock")}>{node.title}</div>
+                            <div class="mainposttitleblock txt">{node.title}</div>
                             {node._rawExcerpt &&
                                 <div className="mainpostcontentblock">
                                     {node._rawExcerpt[0].children[0].text} 

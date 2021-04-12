@@ -1,5 +1,10 @@
 import { graphql } from "gatsby";
 import BlogPost from "../components/blog-post";
+import {
+  filterOutDocsPublishedInTheFuture,
+  filterOutDocsWithoutSlugs,
+  mapEdgesToNodes,
+} from "../lib/helpers";
 import React from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
@@ -54,14 +59,83 @@ export const query = graphql`
         }
       }
     }
+    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
+      title
+      description
+      keywords
+    }
+    posts: allSanityPost(
+      limit: 7
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
+    ) {
+      edges {
+        node {
+          id
+          publishedAt
+          categories {
+            title
+          }
+          mainImage {
+            ...SanityImage
+            alt
+          }
+          title
+          _rawExcerpt
+          slug {
+            current
+          }
+        }
+      }
+    }
+  }
+
+  fragment SanityImage on SanityMainImage {
+    crop {
+      _key
+      _type
+      top
+      bottom
+      left
+      right
+    }
+    hotspot {
+      _key
+      _type
+      x
+      y
+      height
+      width
+    }
+    asset {
+      _id
+    }
   }
 `;
+
 
 const BlogPostTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
+
+  var nodesForGrid = [];
+  if (data.posts) {
+    for (let index = 1; index < data.posts.edges.length; index++) {
+      const element = data.posts.edges[index];
+      nodesForGrid.push(element);
+    }
+  }
+
+  const postNodes = nodesForGrid != []
+    ? mapEdgesToNodes(nodesForGrid)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
+    : [];
+
+    console.log(postNodes);
+
   return (
-    <Layout>
+    <Layout props={{ 'post': true }}>
       {errors && <SEO title="GraphQL Error" />}
       {post && (
         <SEO
@@ -77,7 +151,7 @@ const BlogPostTemplate = (props) => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <BlogPost {...[post, postNodes]} />}
     </Layout>
   );
 };

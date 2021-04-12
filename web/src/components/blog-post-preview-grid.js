@@ -7,14 +7,14 @@ function BlogPostPreviewGrid(props) {
   return (
     <div className={styles.root}>
       {props.title && <h2 className={styles.headline}>{props.title}</h2>}
-      <ul className={styles.grid}>
+      <div className={styles.grid}>
         {props.nodes &&
           props.nodes.map((node) => (
             <li key={node.id}>
               <BlogPostPreview {...node} />
             </li>
           ))}
-      </ul>
+      </div>
       {props.browseMoreHref && (
         <div className={styles.browseMoreNav}>
           <Link to={props.browseMoreHref}>Browse more</Link>

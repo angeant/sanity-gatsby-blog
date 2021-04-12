@@ -29,12 +29,13 @@ function LayoutContainer(props) {
   }
 
   return (
-    <Layout
+    <Layout 
       {...props}
       showNav={showNav}
       siteTitle={data.site.title}
       onHideNav={handleHideNav}
       onShowNav={handleShowNav}
+      
     />
   );
 }

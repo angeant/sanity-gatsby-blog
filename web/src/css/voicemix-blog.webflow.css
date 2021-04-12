@@ -718,6 +718,20 @@
 }
 
 @media screen and (max-width: 991px) {
+  .titleblock {
+    padding-right: 25%;
+  }
+
+  .subcontainer {
+    margin-right: 60px;
+    margin-left: 60px;
+  }
+
+  .openpostimagecontainer {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
   .div-block-261 {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -739,6 +753,66 @@
 }
 
 @media screen and (max-width: 767px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .titleblock {
+    padding-right: 15%;
+    padding-left: 10px;
+  }
+
+  .mainpostsection {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .mainpostimaeblock {
+    height: 280px;
+    margin-right: 10px;
+  }
+
+  .mainpostdatablock {
+    max-width: 45%;
+    padding-top: 20px;
+    padding-right: 35px;
+    padding-left: 20px;
+  }
+
+  .grid {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    justify-items: stretch;
+    -ms-grid-columns: 45% 45%;
+    grid-template-columns: 45% 45%;
+  }
+
+  .gridelementdatablock {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .gridposttitleblock {
+    font-size: 16px;
+  }
+
+  .openpostimagecontainer {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .titlespacingblock {
+    margin-top: 20px;
+  }
+
+  .subtitle {
+    line-height: 30px;
+  }
+
   .calltoactiobutton {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
@@ -849,6 +923,77 @@
 }
 
 @media screen and (max-width: 479px) {
+  .menudropdownbuttonblock {
+    display: none;
+  }
+
+  .titleblock {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .mainpostsection {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .mainpostimaeblock {
+    margin-right: 0px;
+  }
+
+  .mainpostdatablock {
+    max-width: 100%;
+    padding-top: 10px;
+  }
+
+  .container-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .mainposttitleblock {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  .mainpostcontentblock {
+    margin-top: 10px;
+  }
+
+  .grid {
+    -ms-grid-columns: 85%;
+    grid-template-columns: 85%;
+  }
+
+  .gridelementdatablock {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  .gridposttitleblock {
+    line-height: 18px;
+  }
+
+  .subcontainer {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .openpostimagecontainer {
+    margin: 0px;
+  }
+
+  .contentimageblock {
+    height: 280px;
+  }
+
   .slogansection {
     padding-top: 14px;
     padding-bottom: 14px;
@@ -864,6 +1009,15 @@
     padding-bottom: 14px;
   }
 
+  .promotitle {
+    font-size: 24px;
+  }
+
+  .text-block-21 {
+    margin-top: 4px;
+    line-height: 16px;
+  }
+
   .calltoactionbtncntnt {
     padding-right: 17px;
     padding-left: 24px;
@@ -871,6 +1025,34 @@
 
   .text-block-13 {
     margin-right: 12px;
+  }
+
+  .div-block-2 {
+    height: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .relatedtext {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .column-261215 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .column-261217 {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .column-261216 {
+    padding-right: 10px;
+    padding-left: 10px;
   }
 }
 

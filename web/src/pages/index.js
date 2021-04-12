@@ -84,28 +84,15 @@ const IndexPage = (props) => {
   }
 
   const site = (data || {}).site;
-  const firstNode = (data || {}).posts
+
+  var postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts.edges)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
     : [];
+  postNodes = postNodes.filter(filterOutDocsWithoutSlugs);
+  postNodes = postNodes.filter(filterOutDocsPublishedInTheFuture);
+  console.log(postNodes);
 
-  var nodesForGrid = [];
-  if (data.posts) {
-    for (let index = 1; index < data.posts.edges.length; index++) {
-      const element = data.posts.edges[index];
-      nodesForGrid.push(element);
-    }
-  }
-  console.log(data.posts.edges);
-  console.log(data);
-
-
-  const postNodes = nodesForGrid != []
-    ? mapEdgesToNodes(nodesForGrid)
-      .filter(filterOutDocsWithoutSlugs)
-      .filter(filterOutDocsPublishedInTheFuture)
-    : [];
+  var nodes = postNodes.slice(1);
 
   if (!site) {
     throw new Error(
@@ -114,7 +101,7 @@ const IndexPage = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout props={{ 'post': false }}>
       <SEO
         title={site.title}
         description={site.description}
@@ -125,12 +112,12 @@ const IndexPage = (props) => {
           <div class="titleblock">Es momento de alzar la voz por lo que vale la pena para ti.</div>
         </div>
       </div>
-      <MainBlogPostPreview key={0} nodes={firstNode} isInList />
+      <MainBlogPostPreview key={0} nodes={postNodes} isInList />
       <Container>
-        {postNodes && (
+        {nodes && (
           <BlogPostPreviewList
             title="Latest blog posts"
-            nodes={postNodes}
+            nodes={nodes}
             browseMoreHref="/archive/"
           />
         )}

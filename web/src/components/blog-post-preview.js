@@ -5,6 +5,7 @@ import PortableText from "./portableText";
 import React from "react";
 import { format } from "date-fns";
 import { imageUrlFor } from "../lib/image-url";
+import '../css/addition.css';
 
 import { responsiveTitle3 } from "./typography.module.css";
 
@@ -12,6 +13,7 @@ function BlogPostPreview(props) {
   return (
     <Link
       className={cn(props.isInList ? styles.inList : styles.inGrid, "gridelementblock")}
+      style={{textDecoration: 'none'}}
       to={getBlogUrl(props.publishedAt, props.slug.current)}
     >
       <div class="gridelementimage">
@@ -29,7 +31,7 @@ function BlogPostPreview(props) {
       <div class="gridelementdatablock">
         <div class="aligntopblock">
           <div class="categoryblock">{props.categories[0].title}</div>
-          <h3 style={{lineHeight: '20px', margin: '0px'}} class="gridposttitleblock">{props.title}</h3>
+          <h3 style={{lineHeight: '20px', margin: '0px'}} class="gridposttitleblock txt">{props.title}</h3>
           {props._rawExcerpt && (
              <div style={{marginTop: '5px'}} className="mainpostcontentblock">
               {props._rawExcerpt[0].children[0].text}

@@ -53,7 +53,7 @@ const ArchivePage = (props) => {
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts.edges);
 
   return (
-    <Layout>
+    <Layout props={{ 'post': false }}>
       <SEO title="Archivo" />
       <Container>
         <h1 className={responsiveTitle1}>Archivo</h1>

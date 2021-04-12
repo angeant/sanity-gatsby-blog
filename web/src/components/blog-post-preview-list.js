@@ -4,6 +4,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 function BlogPostPreviewGrid(props) {
+  
   return (
     <div>
       <div class="postsgridsection">
