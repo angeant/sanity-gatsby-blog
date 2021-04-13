@@ -77,21 +77,20 @@ const IndexPage = (props) => {
 
   if (errors) {
     return (
-      <Layout>
+      <Layout props={{ 'post': false }}>
         <GraphQLErrorList errors={errors} />
       </Layout>
     );
   }
 
   const site = (data || {}).site;
-
   var postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts.edges)
     : [];
-  postNodes = postNodes.filter(filterOutDocsWithoutSlugs);
-  postNodes = postNodes.filter(filterOutDocsPublishedInTheFuture);
-  console.log(postNodes);
 
+
+  postNodes = postNodes.filter(filterOutDocsWithoutSlugs()).filter(filterOutDocsPublishedInTheFuture());
+  console.log(postNodes);
   var nodes = postNodes.slice(1);
 
   if (!site) {
