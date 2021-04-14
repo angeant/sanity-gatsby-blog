@@ -57,9 +57,11 @@ function BlogPost(props) {
         <div class="w-container">
           <div class="contentspacingblock">
             <div class="subcontainer">
-              {_rawBody && <PortableText blocks={_rawBody} />}
+              <div style={{ whiteSpace: 'pre-wrap' }} className="text-block-5">
+                {_rawBody && <PortableText blocks={_rawBody} />}
+              </div>
             </div>
-            <aside style={{padding: '10px'}} className={styles.metaContent}>
+            <aside style={{ padding: '10px' }} className={styles.metaContent}>
               {authors && <AuthorList items={authors} title="Autores" />}
             </aside>
           </div>
@@ -71,10 +73,10 @@ function BlogPost(props) {
             <div class="promotitle">¿Aún no tienes una voz activa en Voicemix?</div>
             <div class="text-block-21">Descubre los beneficios de ser parte de lo que es valioso para ti.</div>
             <div class="calltoactiobutton align">
-              <div 
-              onClick={() => window.location = "https://voicemix.io"}
-              style={{cursor: 'pointer'}}
-              class="calltoactionbtncntnt openapp">
+              <div
+                onClick={() => window.location = "https://voicemix.io"}
+                style={{ cursor: 'pointer' }}
+                class="calltoactionbtncntnt openapp">
                 <div class="text-block-13">ENCIENDE TU VOZ</div><img src={ligthening} loading="lazy" width="10" alt="" class="image-10" />
               </div>
             </div>
@@ -99,43 +101,43 @@ function BlogPost(props) {
             <div class="columns-15 w-row">
               <div class="column-261215 w-col w-col-4">
                 <div class="footertexttitle">Product</div>
-                <div 
-                onClick={() => window.location = "https://voicemix.io/about"}
-                style={{cursor: 'pointer'}}
-                class="footertext txt">Sobre Nosotros</div>
+                <div
+                  onClick={() => window.location = "https://voicemix.io/about"}
+                  style={{ cursor: 'pointer' }}
+                  class="footertext txt">Sobre Nosotros</div>
               </div>
               <div class="column-261216 w-col w-col-4">
                 <div class="footertexttitle">Resources</div>
-                <div 
-                onClick={() => window.location = "https://voicemix.io/privacy"}
-                style={{cursor: 'pointer'}}
-                class="footertext txt">Privacidad</div>
+                <div
+                  onClick={() => window.location = "https://voicemix.io/privacy"}
+                  style={{ cursor: 'pointer' }}
+                  class="footertext txt">Privacidad</div>
               </div>
             </div>
           </div>
           <div class="div-block-262">
             <div class="calltoactiobutton align">
-              <div 
-              onClick={() => window.location = "https://voicemix.io"}
-              style={{cursor: 'pointer'}}
-              class="calltoactionbtncntnt openapp">
+              <div
+                onClick={() => window.location = "https://voicemix.io"}
+                style={{ cursor: 'pointer' }}
+                class="calltoactionbtncntnt openapp">
                 <div class="text-block-13">CREA TU VOICEMIX</div><img src="https://uploads-ssl.webflow.com/603967333b870e7fe7c403dd/603aa9edaae3c1e76b4e95fb_rayi.png" loading="lazy" width="10" alt="" class="image-10" />
               </div>
             </div>
             <div>
               <div class="div-block-263">
                 <div
-                onClick={() => window.location = "https://www.instagram.com/voicemix/"}
-                style={{cursor: 'pointer'}}
-                class="social-icon"><img src={instagram} loading="lazy" width="28" alt="" /></div>
-                <div 
-                 onClick={() => window.location = "https://twitter.com/voicemix"}
-                 style={{cursor: 'pointer'}}
-                class="social-icon"><img src={twitter} loading="lazy" width="28" alt="" /></div>
-                <div 
-                onClick={() => window.location = "https://www.linkedin.com/company/voicemix/about/"}
-                style={{cursor: 'pointer'}}
-                class="social-icon"><img src={linkedin} loading="lazy" width="28" alt="" /></div>
+                  onClick={() => window.location = "https://www.instagram.com/voicemix/"}
+                  style={{ cursor: 'pointer' }}
+                  class="social-icon"><img src={instagram} loading="lazy" width="28" alt="" /></div>
+                <div
+                  onClick={() => window.location = "https://twitter.com/voicemix"}
+                  style={{ cursor: 'pointer' }}
+                  class="social-icon"><img src={twitter} loading="lazy" width="28" alt="" /></div>
+                <div
+                  onClick={() => window.location = "https://www.linkedin.com/company/voicemix/about/"}
+                  style={{ cursor: 'pointer' }}
+                  class="social-icon"><img src={linkedin} loading="lazy" width="28" alt="" /></div>
               </div>
             </div>
           </div>

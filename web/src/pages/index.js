@@ -84,13 +84,11 @@ const IndexPage = (props) => {
   }
 
   const site = (data || {}).site;
+
   var postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts.edges)
+    ? mapEdgesToNodes(data.posts.edges).filter(filterOutDocsPublishedInTheFuture).filter(filterOutDocsWithoutSlugs)
     : [];
 
-
-  postNodes = postNodes.filter(filterOutDocsWithoutSlugs()).filter(filterOutDocsPublishedInTheFuture());
-  console.log(postNodes);
   var nodes = postNodes.slice(1);
 
   if (!site) {
