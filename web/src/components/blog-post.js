@@ -48,7 +48,7 @@ function BlogPost(props) {
       <div class="openpostimagesection">
         <div class="w-container">
           {mainImage && mainImage.asset &&
-            <div class="openpostimagecontainer"><img src={imageUrlFor(buildImageObj(mainImage))} width="743" sizes="(maxWidth: 479px) 100vw, (maxWidth: 767px) 87vw, (maxWidth: 991px) 86vw, 850px"
+            <div class="openpostimagecontainer"><img src={imageUrlFor(buildImageObj(mainImage))} 
               alt={mainImage.alt} loading="lazy" class="image-2" /></div>
           }
         </div>
@@ -102,7 +102,7 @@ function BlogPost(props) {
               <div class="column-261215 w-col w-col-4">
                 <div class="footertexttitle">Product</div>
                 <div
-                  onClick={() => window.location = "https://voicemix.io/about"}
+                  onClick={() => window.location = "https://voicemix.io/aboutUs"}
                   style={{ cursor: 'pointer' }}
                   class="footertext txt">Sobre Nosotros</div>
               </div>
